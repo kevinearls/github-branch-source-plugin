@@ -1,0 +1,34 @@
+---
+github:
+  credentialsId: github-scan
+packaging:
+  cwpVersion: 1.0
+  config:
+    bundle:
+      groupId: "io.jenkins.tools.war-packager.demo"
+      artifactId: "pom-input-demo"
+      vendor: "Jenkins project"
+    buildSettings:
+      pom: effective-pom.xml
+      version: 2.121.4-cb-1
+    war:
+      groupId: "org.jenkins-ci.main"
+      artifactId: "jenkins-war"
+      source:
+        version: 2.121.4-cb-1
+ath:
+  useLocalSnapshots: true
+pct:
+  useLocalSnapshots: true
+  plugins:
+    - "github-branch-source"
+urr:
+  disabled: false
+  publishPOMs: true
+  branch: stable-2.121
+cjocATH:
+  rerunFailingTestsCount: 1
+jeATH:
+  rerunFailingTestsCount: 1
+verifiedATH:
+  rerunFailingTestsCount: 1
